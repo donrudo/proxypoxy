@@ -1,0 +1,10 @@
+# Core dependencies for proxypoxy
+
+# AWS SDK for Python - used for AWS cloud provider integration
+boto3>=1.26.0
+
+# HTTP client library - used for Digital Ocean API calls
+urllib3>=1.26.0
+
+# SSL certificate bundle - used for HTTPS validation with Digital Ocean
+certifi>=2022.12.7
