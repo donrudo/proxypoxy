@@ -7,12 +7,19 @@ Only Digital Ocean and AWS are supported by now, Openstack is planned.
 
 Requirements
 ------------
+**Python 3.x** is required.
+
+Install dependencies using:
+```bash
+pip install -r requirements.txt
+```
+
 poxy uses the following libraries:
-  * subprocesses (for SSH, paramiko implementation failed and is commented for now at ssh.py)
-  * urllib3 (for the http calls to DO) 
-  * certifi (for https calls, for DO)
-  * boto3 (for aws usage)
-  * json just for fun.
+  * boto3 (for AWS usage)
+  * urllib3 (for HTTP calls to Digital Ocean)
+  * certifi (for HTTPS calls to Digital Ocean)
+  * subprocess (standard library - for SSH, paramiko implementation failed and is commented for now at ssh.py)
+  * json (standard library)
 
 
 Config file:

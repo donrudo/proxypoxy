@@ -23,7 +23,7 @@ class Proxy:
         hostname = " " + username + "@" + ip_address
         params = "ssh" + socks_enabled + str(port) + " -i " + self.private_key + hostname + " "
 
-        print >> sys.stderr, params
+        print(params, file=sys.stderr)
         args = shlex.split(params)
         self.ssh = subprocess.Popen(args, shell=False) #, stdout='/dev/null',stdin='/dev/null')
         # pk = paramiko.RSAKey.from_private_key_file(self.private_key)

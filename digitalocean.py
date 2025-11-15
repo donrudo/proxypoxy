@@ -16,7 +16,7 @@ class Cloud:
 
     def set_token(self, token):
         if token == '':
-            print "Hey! token is empty"
+            print("Hey! token is empty")
         else:
             self.__token__ = token
 
@@ -56,7 +56,7 @@ class Cloud:
         return data
     
     def debug(self,req):
-        print >> sys.stderr, "status", req.status 
-        print >> sys.stderr, "ratelimit-remaining:", req.getheader("ratelimit-remaining")
-        print >> sys.stderr, "ratelimit-limit:", req.getheader("ratelimit-limit")
-        print >> sys.stderr, "ratelimit-reset:", req.getheader("ratelimit-reset")
+        print("status", req.status, file=sys.stderr)
+        print("ratelimit-remaining:", req.getheader("ratelimit-remaining"), file=sys.stderr)
+        print("ratelimit-limit:", req.getheader("ratelimit-limit"), file=sys.stderr)
+        print("ratelimit-reset:", req.getheader("ratelimit-reset"), file=sys.stderr)
