@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import json
 import sys
@@ -12,7 +12,7 @@ def load_config(configfile):
     Loads the given cloud config provided and will return an object for the configured cloud
     """
     if configfile =="":
-        print "Error: Configuration file not provided"
+        print("Error: Configuration file not provided")
         sys.exit(1)
     
     __cloud = None
@@ -35,7 +35,7 @@ elif data["digitalocean"]["token"] != "":
     cloud = digitalocean.Cloud(data["digitalocean"]["token"], data["digitalocean"]["username"])
 
 if cloud == None:
-    print "Error Initializing Cloud"
+    print("Error Initializing Cloud")
     sys.exit(1)
 
 ###
